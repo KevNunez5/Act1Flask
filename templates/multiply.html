@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Multiply by 2{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Multiply a Number by 2</h1>
+</div>
+
+{{ wtf.quick_form(form) }}
+
+{% if result is not none %}
+    <h3>Result: {{ result }}</h3>
+{% endif %}
+{% endblock %}
